@@ -42,16 +42,51 @@
             opacity: 0.9;
         }
 
-        /* Manually arranging pictures */
-        .background-images img:nth-child(1) { top: 8%; left: 6%; }
-        .background-images img:nth-child(2) { top: 15%; right: 5%; }
-        .background-images img:nth-child(3) { top: 38%; left: 10%; }
-        .background-images img:nth-child(4) { top: 55%; right: 8%; }
-        .background-images img:nth-child(5) { top: 72%; left: 14%; }
-        .background-images img:nth-child(6) { top: 85%; right: 12%; }
-        .background-images img:nth-child(7) { top: 22%; left: 45%; }
-        .background-images img:nth-child(8) { top: 50%; right: 35%; }
+      /* Scrapbook-style layout with slight overlapping */
+.background-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
+.background-images img {
+    position: absolute;
+    width: 20vw; /* Visible size */
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
+}
+
+/* Unique placement for each image */
+.background-images img:nth-child(1) { top: 5%; left: 8%; rotate: -10deg; }
+.background-images img:nth-child(2) { top: 15%; right: 5%; rotate: 8deg; }
+.background-images img:nth-child(3) { top: 35%; left: 12%; rotate: -5deg; }
+.background-images img:nth-child(4) { top: 55%; right: 8%; rotate: 6deg; }
+.background-images img:nth-child(5) { top: 75%; left: 18%; rotate: -7deg; }
+.background-images img:nth-child(6) { top: 88%; right: 10%; rotate: 12deg; }
+.background-images img:nth-child(7) { top: 22%; left: 50%; rotate: -3deg; }
+.background-images img:nth-child(8) { top: 48%; right: 38%; rotate: 4deg; }
+.background-images img:nth-child(9) { top: 60%; left: 40%; rotate: -6deg; }
+.background-images img:nth-child(10) { top: 80%; right: 28%; rotate: 10deg; }
+.background-images img:nth-child(11) { top: 10%; left: 35%; rotate: -8deg; }
+.background-images img:nth-child(12) { top: 42%; right: 20%; rotate: 5deg; }
+.background-images img:nth-child(13) { top: 65%; left: 10%; rotate: -4deg; }
+.background-images img:nth-child(14) { top: 78%; right: 50%; rotate: 7deg; }
+.background-images img:nth-child(15) { top: 15%; left: 60%; rotate: -6deg; }
+.background-images img:nth-child(16) { top: 53%; right: 12%; rotate: 3deg; }
+.background-images img:nth-child(17) { top: 70%; left: 55%; rotate: -9deg; }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .background-images img {
+        width: 40vw; /* Bigger for mobile */
+        max-width: 160px;
+    }
+
+}
         /* Envelope */
         .envelope {
             width: 85vw;
@@ -140,7 +175,17 @@
         <img src="pic6.jpg" alt="Love Image">
         <img src="pic7.jpg" alt="Love Image">
         <img src="pic8.jpg" alt="Love Image">
+        <img src="pic9.jpg" alt="Love Image">
+        <img src="pic10.jpg" alt="Love Image">
+        <img src="pic11.jpg" alt="Love Image">
+        <img src="pic12.jpg" alt="Love Image">
+        <img src="pic13.jpg" alt="Love Image">
+        <img src="pic14.jpg" alt="Love Image">
+        <img src="pic15.jpg" alt="Love Image">
+        <img src="pic16.jpg" alt="Love Image">
+        <img src="pic17.jpg" alt="Love Image">
     </div>
+    
 
     <div class="envelope" onclick="openLetter()">
         💌
